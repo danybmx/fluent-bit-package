@@ -151,7 +151,7 @@ jobs:
           name: ${{ env.FB_PACKAGE_NAME }}_${{ env.VERSION }}_${{ matrix.type }}
           path: packages/${{ matrix.type }}
 
-      - name: Upload asset
-        uses: actions/upload-artifact@v3
-        with: 
-          path: packages/**/*
+      - name: Upload assets
+        uses: softprops/action-gh-release@v1
+        with:
+          files: packages/**/*
