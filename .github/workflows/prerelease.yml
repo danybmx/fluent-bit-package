@@ -154,4 +154,4 @@ jobs:
       - name: Upload asset
         uses: actions/upload-artifact@v3
         with: 
-          path: packages/**/*.{deb,rpm,zip}
+          path: packages/**/*
