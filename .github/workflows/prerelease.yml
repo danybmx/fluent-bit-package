@@ -151,7 +151,5 @@ jobs:
           name: ${{ env.FB_PACKAGE_NAME }}_${{ env.VERSION }}_${{ matrix.type }}
           path: packages/${{ matrix.type }}
 
-      - name: Upload assets
-        uses: softprops/action-gh-release@v1
-        with:
-          files: packages/**/*
+      - name: Upload asset
+        run: bash ./scripts/upload_assets_gh.sh
