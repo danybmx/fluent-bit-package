@@ -152,4 +152,6 @@ jobs:
           path: packages/${{ matrix.type }}
 
       - name: Upload asset
-        run: bash ./scripts/upload_assets_gh.sh
+        uses: actions/upload-artifact@v1.2.3
+        with: 
+          path: packages/**/*.{deb,rpm,zip}
