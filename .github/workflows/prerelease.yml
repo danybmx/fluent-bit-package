@@ -152,6 +152,6 @@ jobs:
           path: packages/${{ matrix.type }}
 
       - name: Upload asset
-        uses: actions/upload-artifact@v1.2.3
+        uses: actions/upload-artifact@v3
         with: 
           path: packages/**/*.{deb,rpm,zip}
