@@ -10,9 +10,14 @@ on:
         description: 'Package name to sign'
         required: true
 
+env:
+  GPG_MAIL: ${{ secrets.LOGGING_GPG_MAIL }}
+  GPG_PASSPHRASE: ${{ secrets.OHAI_GPG_PASSPHRASE }}
+  GPG_PRIVATE_KEY_BASE64: ${{ secrets.OHAI_GPG_PRIVATE_KEY_BASE64 }} # base64 encoded
+
 jobs:
   sign_asset:
-    name: 'Sign asset'
+    name: Sign asset
     runs-on: ubuntu-20.04
     steps:
       - name: Check out repository
